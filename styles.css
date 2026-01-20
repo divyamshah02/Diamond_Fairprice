@@ -61,6 +61,19 @@ ul {
   color: var(--accent-blue);
 }
 
+/* Update the existing .brand-logo style to handle images */
+.brand-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* New style for the image logo */
+.navbar-logo-img {
+    height: 40px; /* Adjust this value (e.g., 35px to 50px) to fit your design */
+    width: auto;  /* Maintains the aspect ratio */
+    object-fit: contain;
+}
+
 .brand-text {
   line-height: 1.1;
 }
