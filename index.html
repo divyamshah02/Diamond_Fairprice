@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Fair Price - Find Your Perfect Diamond</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="brand-logo">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <div class="brand-text ms-3">
+                    <div class="brand-name">DIAMOND</div>
+                    <div class="brand-subtitle">FAIR PRICE</div>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#diamonds">Diamonds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
+                        <a class="btn-nav-login" href="#login">
+                            <i class="fas fa-user me-2"></i>Login
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn-nav-signup" href="#signup">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-particles"></div>
+        <div class="hero-background"></div>
+        <div class="container position-relative">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-10 mx-auto text-center">
+                    <div class="contact-phone mb-4 animate-fade-in">
+                        <i class="fas fa-phone-alt me-2"></i>
+                        <span>9876 543 210</span>
+                    </div>
+                    <h1 class="hero-title animate-slide-up">
+                        Discover Your Perfect<br>
+                        <span class="text-highlight">Diamond</span> Journey
+                    </h1>
+                    <p class="hero-subtitle animate-slide-up-delay">
+                        Experience luxury diamond selection with our advanced filtering tools.<br class="d-none d-md-block">
+                        Find the perfect stone that tells your unique story.
+                    </p>
+                    <div class="hero-cta animate-fade-in-delay">
+                        <a href="#diamonds" class="btn-hero-primary me-3">
+                            <span>Explore Diamonds</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#how-it-works" class="btn-hero-outline">
+                            <span>Learn More</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats mt-5">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-6 col-md-3">
+                                <div class="stat-box">
+                                    <div class="stat-number">50K+</div>
+                                    <div class="stat-label">Diamonds</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="stat-box">
+                                    <div class="stat-number">10K+</div>
+                                    <div class="stat-label">Happy Customers</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="stat-box">
+                                    <div class="stat-number">100%</div>
+                                    <div class="stat-label">Certified</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="stat-box">
+                                    <div class="stat-number">24/7</div>
+                                    <div class="stat-label">Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Interactive Diamond Builder -->
+    <section id="diamonds" class="diamond-builder-section">
+        <div class="container-fluid p-0">
+            <div class="builder-header">
+                <div class="container">
+                    <h2 class="builder-main-title">Discover Your Diamond</h2>
+                    <p class="builder-main-subtitle">Explore the five essential characteristics that define a diamond's beauty and value</p>
+                </div>
+            </div>
+
+            <div class="diamond-builder-container">
+                <!-- Tabs Navigation -->
+                <div class="builder-tabs-wrapper">
+                    <div class="builder-tabs">
+                        <button class="builder-tab active" data-tab="shape">
+                            <span class="tab-number">01</span>
+                            <span class="tab-title">Shape</span>
+                        </button>
+                        <button class="builder-tab" data-tab="carat">
+                            <span class="tab-number">02</span>
+                            <span class="tab-title">Carat</span>
+                        </button>
+                        <button class="builder-tab" data-tab="color">
+                            <span class="tab-number">03</span>
+                            <span class="tab-title">Color</span>
+                        </button>
+                        <button class="builder-tab" data-tab="clarity">
+                            <span class="tab-number">04</span>
+                            <span class="tab-title">Clarity</span>
+                        </button>
+                        <button class="builder-tab" data-tab="cut">
+                            <span class="tab-number">05</span>
+                            <span class="tab-title">Cut</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="builder-content">
+                    <!-- Shape Tab -->
+                    <div class="tab-content active" data-content="shape">
+                        <div class="builder-split">
+                            <!-- LEFT: Large Visual -->
+                            <div class="builder-visual">
+                                <div class="visual-container">
+                                    <div class="visual-label" id="shapeLabel">Round Brilliant</div>
+                                    <div class="visual-image-wrapper">
+                                        <img id="shapeImage" src="/public/diamond-round.jpg" alt="Diamond Shape" class="visual-diamond-img">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- RIGHT: Controls -->
+                            <div class="builder-controls">
+                                <div class="controls-inner">
+                                    <h3 class="controls-title">Select Your Diamond Shape</h3>
+                                    <p class="controls-description">Each shape offers unique brilliance and character. Choose the form that speaks to your style.</p>
+                                    
+                                    <div class="shape-options">
+                                        <button class="shape-option active" data-shape="round">
+                                            <div class="shape-icon">
+                                                <svg viewBox="0 0 100 100" width="32" height="32">
+                                                    <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                                </svg>
+                                            </div>
+                                            <span class="shape-name">Round</span>
+                                        </button>
+                                        <button class="shape-option" data-shape="princess">
+                                            <div class="shape-icon">
+                                                <svg viewBox="0 0 100 100" width="32" height="32">
+                                                    <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                                </svg>
+                                            </div>
+                                            <span class="shape-name">Princess</span>
+                                        </button>
+                                        <button class="shape-option" data-shape="emerald">
+                                            <div class="shape-icon">
+                                                <svg viewBox="0 0 100 100" width="32" height="32">
+                                                    <rect x="25" y="20" width="50" height="60" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                                </svg>
+                                            </div>
+                                            <span class="shape-name">Emerald</span>
+                                        </button>
+                                        <button class="shape-option" data-shape="oval">
+                                            <div class="shape-icon">
+                                                <svg viewBox="0 0 100 100" width="32" height="32">
+                                                    <ellipse cx="50" cy="50" rx="30" ry="35" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                                </svg>
+                                            </div>
+                                            <span class="shape-name">Oval</span>
+                                        </button>
+                                        <button class="shape-option" data-shape="cushion">
+                                            <div class="shape-icon">
+                                                <svg viewBox="0 0 100 100" width="32" height="32">
+                                                    <rect x="20" y="20" width="60" height="60" rx="12" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                                </svg>
+                                            </div>
+                                            <span class="shape-name">Cushion</span>
+                                        </button>
+                                        <button class="shape-option" data-shape="pear">
+                                            <div class="shape-icon">
+                                                <svg viewBox="0 0 100 100" width="32" height="32">
+                                                    <path d="M 50 20 Q 40 35 50 50 Q 60 35 50 20 M 50 50 Q 30 60 30 75 Q 30 85 50 90 Q 70 85 70 75 Q 70 60 50 50" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                                </svg>
+                                            </div>
+                                            <span class="shape-name">Pear</span>
+                                        </button>
+                                        <button class="shape-option" data-shape="marquise">
+                                            <div class="shape-icon">
+                                                <svg viewBox="0 0 100 100" width="32" height="32">
+                                                    <ellipse cx="50" cy="50" rx="18" ry="35" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                                </svg>
+                                            </div>
+                                            <span class="shape-name">Marquise</span>
+                                        </button>
+                                        <button class="shape-option" data-shape="heart">
+                                            <div class="shape-icon">
+                                                <svg viewBox="0 0 100 100" width="32" height="32">
+                                                    <path d="M 50 85 Q 20 60 20 40 Q 20 20 35 20 Q 50 20 50 40 Q 50 20 65 20 Q 80 20 80 40 Q 80 60 50 85" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                                </svg>
+                                            </div>
+                                            <span class="shape-name">Heart</span>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="expert-note">
+                                        <div class="note-icon">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+                                                <path d="M10 6v4m0 4h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h6>Expert Insight</h6>
+                                            <p>Round brilliants are the most sought-after shape, representing 60% of all diamond purchases. Fancy shapes like oval and pear can appear up to 10% larger for the same carat weight.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Carat Tab -->
+                        <div class="tab-content" data-content="carat">
+                            <!-- Split into two-column layout: controls left, image right -->
+                            <div class="tab-two-column">
+                                <!-- Left side: Controls and options -->
+                                <div class="tab-left">
+                                    <div class="attribute-header">
+                                        <h3>Carat Weight</h3>
+                                        <p>The weight of the diamond measured in carats. One carat equals 200 milligrams. Larger diamonds are exponentially rarer and more valuable.</p>
+                                    </div>
+                                    <div class="attribute-options">
+                                        <button class="attribute-btn" data-carat="0.25">
+                                            <span class="option-label">1/4</span>
+                                            <span class="option-sublabel">0.25 ct</span>
+                                        </button>
+                                        <button class="attribute-btn" data-carat="0.33">
+                                            <span class="option-label">1/3</span>
+                                            <span class="option-sublabel">0.33 ct</span>
+                                        </button>
+                                        <button class="attribute-btn" data-carat="0.50">
+                                            <span class="option-label">1/2</span>
+                                            <span class="option-sublabel">0.50 ct</span>
+                                        </button>
+                                        <button class="attribute-btn" data-carat="0.75">
+                                            <span class="option-label">3/4</span>
+                                            <span class="option-sublabel">0.75 ct</span>
+                                        </button>
+                                        <button class="attribute-btn active" data-carat="1.00">
+                                            <span class="option-label">1</span>
+                                            <span class="option-sublabel">1.00 ct</span>
+                                        </button>
+                                        <button class="attribute-btn" data-carat="1.50">
+                                            <span class="option-label">1.5</span>
+                                            <span class="option-sublabel">1.50 ct</span>
+                                        </button>
+                                        <button class="attribute-btn" data-carat="2.00">
+                                            <span class="option-label">2</span>
+                                            <span class="option-sublabel">2.00 ct</span>
+                                        </button>
+                                        <button class="attribute-btn" data-carat="3.00">
+                                            <span class="option-label">3</span>
+                                            <span class="option-sublabel">3.00 ct</span>
+                                        </button>
+                                    </div>
+                                    <div class="attribute-info">
+                                        <div class="info-card">
+                                            <i class="fas fa-lightbulb"></i>
+                                            <div>
+                                                <h5>Expert Tip</h5>
+                                                <p>Consider diamonds just below popular carat weights (0.90 ct vs 1.00 ct) for better value without visible size difference.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Right side: Diamond visualization -->
+                                <div class="tab-right">
+                                    <div class="tab-visualization">
+                                        <div class="visualization-label">
+                                            <span id="caratLabel">1.00 Carat</span>
+                                        </div>
+                                        <div class="diamond-display">
+                                            <div class="diamond-glow"></div>
+                                            <img id="caratImage" src="Ring-05.png" alt="Carat Size Visualization" class="tab-diamond-image">
+                                            <div class="diamond-light-rays"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Color Tab -->
+                        <div class="tab-content" data-content="color">
+                            <!-- Swap columns: controls left, image right -->
+                            <div class="tab-two-column">
+                                <!-- Left side: Controls and options -->
+                                <div class="tab-left">
+                                    <div class="attribute-header">
+                                        <h3>Color Grade</h3>
+                                        <p>Diamond color is graded from D (completely colorless) to M (light yellow or brown). The less color, the higher the grade and value.</p>
+                                    </div>
+                                    <div class="color-scale mb-4">
+                                        <div class="scale-labels">
+                                            <span>Faint Yellow</span>
+                                            <span>Near Colorless</span>
+                                            <span>Colorless</span>
+                                        </div>
+                                    </div>
+                                    <div class="attribute-options">
+                                        <button class="attribute-btn" data-color="M">
+                                            <span class="option-label">M</span>
+                                        </button>
+                                        <button class="attribute-btn" data-color="L">
+                                            <span class="option-label">L</span>
+                                        </button>
+                                        <button class="attribute-btn" data-color="K">
+                                            <span class="option-label">K</span>
+                                        </button>
+                                        <button class="attribute-btn" data-color="J">
+                                            <span class="option-label">J</span>
+                                        </button>
+                                        <button class="attribute-btn" data-color="I">
+                                            <span class="option-label">I</span>
+                                        </button>
+                                        <button class="attribute-btn" data-color="H">
+                                            <span class="option-label">H</span>
+                                        </button>
+                                        <button class="attribute-btn" data-color="G">
+                                            <span class="option-label">G</span>
+                                        </button>
+                                        <button class="attribute-btn" data-color="F">
+                                            <span class="option-label">F</span>
+                                        </button>
+                                        <button class="attribute-btn active" data-color="E">
+                                            <span class="option-label">E</span>
+                                        </button>
+                                        <button class="attribute-btn" data-color="D">
+                                            <span class="option-label">D</span>
+                                        </button>
+                                    </div>
+                                    <div class="attribute-info">
+                                        <div class="info-card">
+                                            <i class="fas fa-palette"></i>
+                                            <div>
+                                                <h5>Expert Tip</h5>
+                                                <p>G-H color diamonds offer excellent value with no visible color to the untrained eye. D-F are premium colorless grades.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Right side: Diamond visualization -->
+                                <div class="tab-right">
+                                    <div class="tab-visualization">
+                                        <div class="visualization-label">
+                                            <span id="colorLabel">E - Colorless</span>
+                                        </div>
+                                        <div class="diamond-display">
+                                            <div class="diamond-glow"></div>
+                                            <img id="colorImage" src="e.png" alt="Color Grade Visualization" class="tab-diamond-image">
+                                            <div class="diamond-light-rays"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Clarity Tab -->
+                        <div class="tab-content" data-content="clarity">
+                            <!-- Split into two-column layout: controls left, image right -->
+                            <div class="tab-two-column">
+                                <!-- Left side: Controls and options -->
+                                <div class="tab-left">
+                                    <div class="attribute-header">
+                                        <h3>Clarity Grade</h3>
+                                        <p>Clarity measures internal and external imperfections called inclusions and blemishes. Fewer and smaller inclusions mean higher clarity and value.</p>
+                                    </div>
+                                    <!-- <div class="clarity-scale mb-4">
+                                        <div class="scale-sections">
+                                            <div class="scale-section">
+                                                <span class="scale-label">Included</span>
+                                                <div class="scale-bar" style="width: 20%; background: #e74c3c;"></div>
+                                            </div>
+                                            <div class="scale-section">
+                                                <span class="scale-label">Slightly Included</span>
+                                                <div class="scale-bar" style="width: 30%; background: #f39c12;"></div>
+                                            </div>
+                                            <div class="scale-section">
+                                                <span class="scale-label">Very Slightly Included</span>
+                                                <div class="scale-bar" style="width: 30%; background: #2ecc71;"></div>
+                                            </div>
+                                            <div class="scale-section">
+                                                <span class="scale-label">Flawless</span>
+                                                <div class="scale-bar" style="width: 20%; background: #3498db;"></div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="attribute-options">
+                                        <button class="attribute-btn" data-clarity="I2">
+                                            <span class="option-label">I2</span>
+                                        </button>
+                                        <button class="attribute-btn" data-clarity="I1">
+                                            <span class="option-label">I1</span>
+                                        </button>
+                                        <button class="attribute-btn" data-clarity="SI2">
+                                            <span class="option-label">SI2</span>
+                                        </button>
+                                        <button class="attribute-btn active" data-clarity="SI1">
+                                            <span class="option-label">SI1</span>
+                                        </button>
+                                        <button class="attribute-btn" data-clarity="VS2">
+                                            <span class="option-label">VS2</span>
+                                        </button>
+                                        <button class="attribute-btn" data-clarity="VS1">
+                                            <span class="option-label">VS1</span>
+                                        </button>
+                                        <button class="attribute-btn" data-clarity="VVS2">
+                                            <span class="option-label">VVS2</span>
+                                        </button>
+                                        <button class="attribute-btn" data-clarity="VVS1">
+                                            <span class="option-label">VVS1</span>
+                                        </button>
+                                        <button class="attribute-btn" data-clarity="IF">
+                                            <span class="option-label">IF</span>
+                                        </button>
+                                        <button class="attribute-btn" data-clarity="FL">
+                                            <span class="option-label">FL</span>
+                                        </button>
+                                    </div>
+                                    <div class="attribute-info">
+                                        <div class="info-card">
+                                            <i class="fas fa-lightbulb"></i>
+                                            <div>
+                                                <h5>Expert Tip</h5>
+                                                <p>VS2 and SI1 clarity diamonds are eye-clean (no visible inclusions) and offer the best value for most buyers.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Right side: Diamond visualization -->
+                                <div class="tab-right">
+                                    <div class="tab-visualization">
+                                        <div class="visualization-label">
+                                            <span id="clarityLabel">SI1 - Slightly Included</span>
+                                        </div>
+                                        <div class="diamond-display">
+                                            <div class="diamond-glow"></div>
+                                            <img id="clarityImage" src="ClarityArtboard-1-copy-5_3.png" alt="Clarity Grade Visualization" class="tab-diamond-image">
+                                            <div class="diamond-light-rays"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cut Tab -->
+                        <div class="tab-content" data-content="cut">
+                            <!-- Split into two-column layout: controls left, image right -->
+                            <div class="tab-two-column">
+                                <!-- Left side: Controls and options -->
+                                <div class="tab-left">
+                                    <div class="attribute-header">
+                                        <h3>Cut Quality</h3>
+                                        <p>Cut determines how well a diamond reflects light. Better cuts produce more brilliance, fire, and scintillation - the diamond's sparkle.</p>
+                                    </div>
+                                    <div class="cut-comparison mb-4">
+                                        <div class="comparison-row">
+                                            <div class="comparison-item">
+                                                <div class="comparison-visual poor">
+                                                    <i class="fas fa-arrow-down"></i>
+                                                </div>
+                                                <span>Poor Cut - Light Escapes</span>
+                                            </div>
+                                            <div class="comparison-item">
+                                                <div class="comparison-visual excellent">
+                                                    <i class="fas fa-arrow-up"></i>
+                                                </div>
+                                                <span>Excellent Cut - Light Returns</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="attribute-options">
+                                        <button class="attribute-btn" data-cut="Good">
+                                            <span class="option-label">Good</span>
+                                            <span class="option-sublabel">~60% Light Return</span>
+                                        </button>
+                                        <button class="attribute-btn active" data-cut="Very Good">
+                                            <span class="option-label">Very Good</span>
+                                            <span class="option-sublabel">~75% Light Return</span>
+                                        </button>
+                                        <button class="attribute-btn" data-cut="Excellent">
+                                            <span class="option-label">Excellent</span>
+                                            <span class="option-sublabel">~85% Light Return</span>
+                                        </button>
+                                        <button class="attribute-btn" data-cut="Ideal">
+                                            <span class="option-label">Ideal</span>
+                                            <span class="option-sublabel">~95% Light Return</span>
+                                        </button>
+                                    </div>
+                                    <div class="attribute-info">
+                                        <div class="info-card">
+                                            <i class="fas fa-lightbulb"></i>
+                                            <div>
+                                                <h5>Expert Tip</h5>
+                                                <p>Cut is the most important factor for a diamond's beauty. An Excellent or Ideal cut grade ensures maximum brilliance and sparkle.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Right side: Diamond visualization -->
+                                <div class="tab-right">
+                                    <div class="tab-visualization">
+                                        <div class="visualization-label">
+                                            <span id="cutLabel">Very Good Cut - Excellent Light Return</span>
+                                        </div>
+                                        <div class="diamond-display">
+                                            <div class="diamond-glow"></div>
+                                            <img id="cutImage" src="cut very good-01.png" alt="Cut Quality Visualization" class="tab-diamond-image">
+                                            <div class="diamond-light-rays"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Diamond Showcase -->
+    <section class="premium-showcase-section">
+        <div class="container-fluid p-0">
+            <div class="showcase-grid">
+                <div class="showcase-visual">
+                    <div class="showcase-image-wrapper">
+                        <img src="/public/diamond-hero.jpg" alt="Premium Diamond Collection" class="showcase-img">
+                        <div class="showcase-overlay">
+                            <div class="overlay-badge">
+                                <i class="fas fa-certificate"></i>
+                                <span>GIA Certified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-content">
+                    <div class="showcase-inner">
+                        <span class="showcase-label">Premium Collection</span>
+                        <h2 class="showcase-title">Exceptional Brilliance, Unmatched Quality</h2>
+                        <p class="showcase-description">Every diamond in our collection is handpicked by expert gemologists and certified by the world's most respected laboratories. We guarantee the finest quality, from clarity to cut perfection.</p>
+                        
+                        <div class="showcase-features">
+                            <div class="showcase-feature-item">
+                                <div class="feature-icon-box">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <h4>Certified Excellence</h4>
+                                    <p>GIA, AGS, and IGI certified stones</p>
+                                </div>
+                            </div>
+                            <div class="showcase-feature-item">
+                                <div class="feature-icon-box">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <div>
+                                    <h4>Conflict-Free</h4>
+                                    <p>Ethically sourced with full traceability</p>
+                                </div>
+                            </div>
+                            <div class="showcase-feature-item">
+                                <div class="feature-icon-box">
+                                    <i class="fas fa-infinity"></i>
+                                </div>
+                                <div>
+                                    <h4>Lifetime Guarantee</h4>
+                                    <p>Comprehensive warranty and support</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#diamonds" class="btn-showcase">Explore Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Features Section -->
+    <section class="luxury-features-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="luxury-feature-card">
+                        <div class="luxury-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Certified Authenticity</h4>
+                        <p>Every diamond comes with GIA, AGS, or IGI certification</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="luxury-feature-card">
+                        <div class="luxury-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Insured Shipping</h4>
+                        <p>Free overnight delivery with full insurance coverage</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="luxury-feature-card">
+                        <div class="luxury-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h4>Easy Returns</h4>
+                        <p>30-day money-back guarantee on all purchases</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="luxury-feature-card">
+                        <div class="luxury-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h4>Lifetime Warranty</h4>
+                        <p>Complimentary lifetime warranty and maintenance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="dark-background"></div>
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">How It Works</h2>
+                <div class="title-underline">
+                    <span class="underline-left"></span>
+                    <i class="fas fa-gem"></i>
+                    <span class="underline-right"></span>
+                </div>
+                <p class="section-subtitle text-white-50">Three simple steps to find your perfect diamond</p>
+            </div>
+
+            <div class="visual-reference-full mb-5">
+                <img src="/image.png" alt="How It Works Process" class="img-fluid rounded">
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-icon">
+                        <div class="step-number">01</div>
+                        <div class="step-visual">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                    </div>
+                    <h3>Choose Your Diamond</h3>
+                    <p>Browse our extensive collection of certified diamonds. Use our interactive builder to filter by the 4Cs and find diamonds that match your preferences and budget.</p>
+                </div>
+
+                <div class="step-connector">
+                    <div class="connector-line"></div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-icon">
+                        <div class="step-number">02</div>
+                        <div class="step-visual">
+                            <i class="fas fa-ring"></i>
+                        </div>
+                    </div>
+                    <h3>Select Your Setting</h3>
+                    <p>Choose from our curated collection of ring settings or use your own. Our design tool lets you visualize exactly how your diamond will look in its setting.</p>
+                </div>
+
+                <div class="step-connector">
+                    <div class="connector-line"></div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-icon">
+                        <div class="step-number">03</div>
+                        <div class="step-visual">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3>Complete Your Ring</h3>
+                    <p>Review your custom creation, add personalized engraving, and place your order. We craft and ship your ring with complimentary insurance and a lifetime warranty.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#diamonds" class="btn-hero-outline">
+                    <span>Start Building Your Ring</span>
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Diamond Education Center</h2>
+                <div class="title-underline">
+                    <span class="underline-left"></span>
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="underline-right"></span>
+                </div>
+                <p class="section-subtitle">Everything you need to know to make an informed diamond purchase</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h4>Carat Weight</h4>
+                        <p>Learn how carat weight affects diamond size, pricing, and visual appeal. Discover the magic sizes and best value points.</p>
+                        <a href="#" class="learn-more">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Color Grading</h4>
+                        <p>Understanding the diamond color scale from D to M, and how color impacts value and appearance in different settings.</p>
+                        <a href="#" class="learn-more">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4>Clarity Scale</h4>
+                        <p>Explore the clarity grading system, from Flawless to Included, and learn which grades offer the best value.</p>
+                        <a href="#" class="learn-more">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-adjust"></i>
+                        </div>
+                        <h4>Cut Quality</h4>
+                        <p>Discover why cut is the most important factor in diamond beauty and how it affects brilliance and fire.</p>
+                        <a href="#" class="learn-more">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4>Expert Certification</h4>
+                        <p>Every diamond comes with certification from leading gemological institutes including GIA, IGI, and AGS ensuring authenticity and quality.</p>
+                        <a href="#" class="learn-more">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Lifetime Warranty</h4>
+                        <p>We stand behind every diamond with comprehensive warranty coverage, free inspections, and cleaning services for as long as you own it.</p>
+                        <a href="#" class="learn-more">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h4>Flexible Returns</h4>
+                        <p>Not satisfied? We offer hassle-free returns within 30 days, ensuring you're completely happy with your diamond selection.</p>
+                        <a href="#" class="learn-more">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Trusted by thousands of satisfied customers worldwide</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The platform made finding the perfect diamond incredibly easy. The 4Cs builder helped me understand exactly what I was looking for. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JD</div>
+                            <div class="author-info">
+                                <div class="author-name">John Davidson</div>
+                                <div class="author-location">New York, USA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"As a wholesaler, this platform has transformed how I source diamonds. The search functionality and detailed information save me hours of work every day."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SC</div>
+                            <div class="author-info">
+                                <div class="author-name">Sarah Chen</div>
+                                <div class="author-location">Los Angeles, USA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Exceptional service and quality. The educational resources helped me make an informed decision. The diamond exceeded all my expectations!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MR</div>
+                            <div class="author-info">
+                                <div class="author-name">Michael Rodriguez</div>
+                                <div class="author-location">Miami, USA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trust-badges">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="trust-stat">
+                            <div class="trust-number">50,000+</div>
+                            <div class="trust-label">Happy Customers</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="trust-stat">
+                            <div class="trust-number">4.9/5</div>
+                            <div class="trust-label">Average Rating</div>
+                            <div class="trust-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="trust-stat">
+                            <div class="trust-number">25+</div>
+                            <div class="trust-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about finding your perfect diamond</p>
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What is the most important of the 4Cs?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            While all 4Cs are important, Cut is often considered the most crucial as it directly affects the diamond's brilliance and sparkle. A well-cut diamond will appear more brilliant than a poorly cut diamond of higher color or clarity. However, the "most important" factor ultimately depends on your personal preferences and priorities.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            How do I choose the right carat size?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The right carat size depends on your budget, finger size, and personal preference. Consider that a well-cut smaller diamond can appear larger and more brilliant than a poorly cut larger stone. Also, certain settings can make diamonds appear larger. We recommend trying different sizes to see what looks best and feels comfortable.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            What color grade should I choose?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            For white diamonds, grades D-F are colorless, G-J are near-colorless, and K-M show faint color. Most people cannot distinguish between D-G grades with the naked eye. G-H grades offer excellent value with no visible color in most settings. The metal choice also affects appearance - yellow gold can mask slight color better than platinum or white gold.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Are certified diamonds better?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Certification from reputable labs like GIA, IGI, or AGS provides an independent, objective assessment of a diamond's characteristics. It ensures you're getting exactly what you're paying for and makes comparison shopping easier. We strongly recommend purchasing only certified diamonds for transparency and peace of mind.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            Can I see the diamonds in person?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! We offer virtual appointments where our diamond experts can show you diamonds via video call, and we also have physical locations where you can view diamonds in person. Contact us to schedule an appointment. We also offer a home preview service in select areas where you can view diamonds in the comfort of your own home.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            What is your return policy?
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer a 30-day money-back guarantee on all diamond purchases. If you're not completely satisfied with your diamond, you can return it within 30 days of delivery for a full refund. The diamond must be in its original condition with all certifications and packaging. We also offer free resizing and exchanges to ensure your complete satisfaction.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="cta-title">Ready to Find Your Perfect Diamond?</h2>
+                <p class="cta-text">Start your journey to discovering the diamond of your dreams. Our experts are here to guide you every step of the way.</p>
+                <div class="cta-buttons">
+                    <a href="#builder" class="btn-cta-primary">
+                        <i class="fas fa-search"></i>
+                        Start Your Search
+                    </a>
+                    <a href="#contact" class="btn-cta-secondary">
+                        <i class="fas fa-comments"></i>
+                        Speak with an Expert
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-4">
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Free Expert Consultation</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>30-Day Money Back Guarantee</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Lifetime Warranty Included</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <i class="fas fa-gem"></i>
+                        <h3>Diamond Fair Price</h3>
+                    </div>
+                    <p class="footer-description">Your trusted partner in discovering the perfect diamond. We combine cutting-edge technology with expert knowledge to help you make informed decisions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#builder">Diamond Builder</a></li>
+                        <li><a href="#shapes">Diamond Shapes</a></li>
+                        <li><a href="#education">Education Center</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Diamond Guide</a></li>
+                        <li><a href="#">Certification Info</a></li>
+                        <li><a href="#">Care & Maintenance</a></li>
+                        <li><a href="#">Investment Guide</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2026 Diamond Fair Price. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
