@@ -467,9 +467,9 @@ ul {
 
 .option-btn:hover,
 .option-btn.active {
-  background: var(--primary-blue);
+  background: var(--accent-blue);
   color: white;
-  border-color: var(--primary-blue);
+  border-color: var(--accent-blue);
 }
 
 .tip-box {
@@ -481,6 +481,172 @@ ul {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+}
+
+/* --- CARAT TAB SPECIFIC STYLES --- */
+
+/* Grid Layout for Carat Buttons */
+.carat-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 buttons per row */
+    gap: 15px;
+}
+
+/* Individual Carat Button Styling */
+.carat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90px; /* Fixed height for boxy look */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+/* Top Line (Fraction/Whole Number) */
+.carat-fraction {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+/* Bottom Line (Decimal Weight) */
+.carat-value {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Hover State */
+.carat-box:hover,
+.carat-box.active {
+  background: var(--accent-blue);
+  color: white;
+  border-color: var(--accent-blue);
+}
+
+/* Active State - Gradient Blue to Gold (as per image) */
+.carat-box.active {
+    background: var(--accent-blue);
+    
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(108, 154, 230, 0.3);
+}
+
+.carat-box.active .carat-fraction,
+.carat-box.active .carat-value {
+    color: white !important;
+}
+
+/* Mobile Responsiveness for Carat Grid */
+@media (max-width: 768px) {
+    .carat-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+    }
+}
+
+/* --- COLOR SCALE BAR (Glowing Effect) --- */
+.color-scale-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+.scale-segment {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    opacity: 0.5; /* Dimmed by default */
+    transition: all 0.3s ease;
+}
+
+.scale-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.scale-bar-line {
+    height: 6px;
+    background: var(--border-light);
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Active / Glowing State */
+.scale-segment.active {
+    opacity: 1;
+}
+
+.scale-segment.active .scale-label {
+    color: var(--primary-blue);
+}
+
+.scale-segment.active .scale-bar-line {
+    background: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(44, 123, 229, 0.6); /* The Glow Effect */
+}
+
+/* Optional: Add a subtle animation to the bar fill */
+.scale-segment.active .scale-bar-line::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Ensure buttons are centered and wrap nicely */
+.slider-options.color-options {
+    justify-content: center;
+    gap: 8px;
+}
+
+/* --- CLARITY TAB GRID --- */
+.clarity-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns x 2 rows = 10 items */
+    gap: 15px;
+    width: 100%;
+}
+
+.clarity-grid-container .option-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 10px; /* More padding for a boxy look */
+    height: 100%;
+}
+
+/* Responsive: 3 columns on Tablet */
+@media (max-width: 991px) {
+    .clarity-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Responsive: 2 columns on Mobile */
+@media (max-width: 576px) {
+    .clarity-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* --- VENDORS MARQUEE (NEW) --- */

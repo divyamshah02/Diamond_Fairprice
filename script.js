@@ -47,24 +47,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- GENERIC HANDLER FOR ALL BUILDER BUTTONS ---
     // This one function handles Shape, Carat, Color, Clarity, and Cut
+    // --- GENERIC HANDLER FOR ALL BUILDER BUTTONS ---
     function setupBuilderButtons(buttonSelector, labelId, imageId, labelSuffix = '') {
         const buttons = document.querySelectorAll(buttonSelector);
         const label = document.getElementById(labelId);
 
         buttons.forEach(btn => {
             btn.addEventListener('click', function() {
-                // 1. Toggle Active State
+                // 1. Toggle Active State on Buttons
                 buttons.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
 
                 // 2. Update Label
-                // If button has specific 'data-label', use it. Otherwise use button text.
                 const labelText = this.getAttribute('data-label') || this.textContent;
                 if(label) label.textContent = `${labelText}${labelSuffix}`;
 
-                // 3. Update Image (Read directly from HTML attribute)
+                // 3. Update Image
                 const newImageSrc = this.getAttribute('data-image');
                 updateImage(imageId, newImageSrc);
+
+                // --- NEW LOGIC FOR COLOR BAR GLOW ---
+                // Check if this button is part of a color group
+                const groupID = this.getAttribute('data-group');
+                if (groupID) {
+                    // Remove 'active' from all scale segments
+                    document.querySelectorAll('.scale-segment').forEach(seg => {
+                        seg.classList.remove('active');
+                    });
+                    // Add 'active' to the specific segment ID (e.g. seg-colorless)
+                    const activeSeg = document.getElementById(groupID);
+                    if (activeSeg) activeSeg.classList.add('active');
+                }
             });
         });
     }

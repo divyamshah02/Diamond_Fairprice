@@ -137,7 +137,7 @@
                                         <div class="visual-label text-center mb-3">
                                             <span class="label-badge" id="shapeLabel">Round Brilliant</span>
                                         </div>
-                                        <img id="shapeImage" src="/assets/images/shapes/round.svg" alt="Round Diamond" class="img-fluid visual-img">
+                                        <img id="shapeImage" src="/assets/images/shapes/round.png" alt="Round Diamond" class="img-fluid visual-img">
                                     </div>
                                 </div>
                             </div>
@@ -147,28 +147,28 @@
                                     <p class="control-sub">Each shape offers unique brilliance and character. Choose the form that speaks to your style.</p>
                                     
                                     <div class="shape-grid">
-                                        <button class="shape-btn active" data-label="Round Brilliant" data-image="/assets/images/shapes/round.svg">
+                                        <button class="shape-btn active" data-label="Round Brilliant" data-image="/assets/images/shapes/round.png">
                                             <i class="far fa-circle"></i> <span>Round</span>
                                         </button>
-                                        <button class="shape-btn" data-label="Princess Cut" data-image="/assets/images/shapes/princess.svg">
+                                        <button class="shape-btn" data-label="Princess Cut" data-image="/assets/images/shapes/princess.png">
                                             <i class="far fa-square"></i> <span>Princess</span>
                                         </button>
-                                        <button class="shape-btn" data-label="Emerald Cut" data-image="/assets/images/shapes/emerald.svg">
+                                        <button class="shape-btn" data-label="Emerald Cut" data-image="/assets/images/shapes/emerald.png">
                                             <i class="far fa-gem"></i> <span>Emerald</span>
                                         </button>
-                                        <button class="shape-btn" data-label="Oval Cut" data-image="/assets/images/shapes/oval.svg">
+                                        <button class="shape-btn" data-label="Oval Cut" data-image="/assets/images/shapes/oval.png">
                                             <i class="fas fa-bullseye"></i> <span>Oval</span>
                                         </button>
-                                        <button class="shape-btn" data-label="Cushion Cut" data-image="/assets/images/shapes/radiant.svg">
-                                            <i class="far fa-clone"></i> <span>Cushion</span>
+                                        <button class="shape-btn" data-label="Radiant Cut" data-image="/assets/images/shapes/radiant.png">
+                                            <i class="far fa-clone"></i> <span>Radiant</span>
                                         </button>
-                                        <button class="shape-btn" data-label="Pear Shape" data-image="/assets/images/shapes/pear.svg">
+                                        <button class="shape-btn" data-label="Pear Shape" data-image="/assets/images/shapes/pear.png">
                                             <i class="fas fa-tint"></i> <span>Pear</span>
                                         </button>
-                                        <button class="shape-btn" data-label="Marquise Cut" data-image="/assets/images/shapes/marquise.svg">
+                                        <button class="shape-btn" data-label="Marquise Cut" data-image="/assets/images/shapes/marquise.png">
                                             <i class="fas fa-eye"></i> <span>Marquise</span>
                                         </button>
-                                        <button class="shape-btn" data-label="Heart Shape" data-image="/assets/images/shapes/heart.svg">
+                                        <button class="shape-btn" data-label="Heart Shape" data-image="/assets/images/shapes/heart.png">
                                             <i class="far fa-heart"></i> <span>Heart</span>
                                         </button>
                                     </div>
@@ -206,15 +206,47 @@
                                     <h3 class="control-heading">Carat Weight</h3>
                                     <p class="control-sub">The weight of the diamond measured in carats. One carat equals 200 milligrams. Larger diamonds are exponentially rarer and more valuable.</p>
                                     
-                                    <div class="slider-options mb-4">
-                                        <button class="option-btn" data-carat="0.25" data-image="/assets/images/carat/Ring-01.png">0.25 ct</button>
-                                        <button class="option-btn" data-carat="0.33" data-image="/assets/images/carat/Ring-02.png">0.33 ct</button>
-                                        <button class="option-btn" data-carat="0.50" data-image="/assets/images/carat/Ring-03.png">0.50 ct</button>
-                                        <button class="option-btn" data-carat="0.75" data-image="/assets/images/carat/Ring-04.png">0.75 ct</button>
-                                        <button class="option-btn active" data-carat="1.00" data-image="/assets/images/carat/Ring-05.png">1.00 ct</button>
-                                        <button class="option-btn" data-carat="1.50" data-image="/assets/images/carat/Ring-06.png">1.50 ct</button>
-                                        <button class="option-btn" data-carat="2.00" data-image="/assets/images/carat/Ring-07.png">2.00 ct</button>
-                                        <button class="option-btn" data-carat="3.00" data-image="/assets/images/carat/Ring-08.png">3.00 ct</button>
+                                    <div class="carat-grid-container mb-4">
+                                        <button class="option-btn carat-box" data-carat="0.25" data-label="0.25" data-image="/assets/images/carat/Ring-01.png">
+                                            <span class="carat-fraction">1/4</span>
+                                            <span class="carat-value">0.25 ct</span>
+                                        </button>
+                                        <button class="option-btn carat-box" data-carat="0.33" data-label="0.33" data-image="/assets/images/carat/Ring-02.png">
+                                            <span class="carat-fraction">1/3</span>
+                                            <span class="carat-value">0.33 ct</span>
+                                        </button>
+                                        <button class="option-btn carat-box" data-carat="0.50" data-label="0.50" data-image="/assets/images/carat/Ring-03.png">
+                                            <span class="carat-fraction">1/2</span>
+                                            <span class="carat-value">0.50 ct</span>
+                                        </button>
+                                        <button class="option-btn carat-box" data-carat="0.75" data-label="0.75" data-image="/assets/images/carat/Ring-04.png">
+                                            <span class="carat-fraction">3/4</span>
+                                            <span class="carat-value">0.75 ct</span>
+                                        </button>
+                                        <button class="option-btn carat-box active" data-carat="1.00" data-label="1.00" data-image="/assets/images/carat/Ring-05.png">
+                                            <span class="carat-fraction">1</span>
+                                            <span class="carat-value">1.00 ct</span>
+                                        </button>
+                                        <button class="option-btn carat-box" data-carat="1.50" data-label="1.50" data-image="/assets/images/carat/Ring-06.png">
+                                            <span class="carat-fraction">1.5</span>
+                                            <span class="carat-value">1.50 ct</span>
+                                        </button>
+                                        <button class="option-btn carat-box" data-carat="2.00" data-label="2.00" data-image="/assets/images/carat/Ring-07.png">
+                                            <span class="carat-fraction">2</span>
+                                            <span class="carat-value">2.00 ct</span>
+                                        </button>
+                                        <button class="option-btn carat-box" data-carat="3.00" data-label="3.00" data-image="/assets/images/carat/Ring-08.png">
+                                            <span class="carat-fraction">3</span>
+                                            <span class="carat-value">3.00 ct</span>
+                                        </button>
+                                        <button class="option-btn carat-box" data-carat="4.00" data-label="4.00" data-image="/assets/images/carat/Ring-08.png">
+                                            <span class="carat-fraction">4</span>
+                                            <span class="carat-value">4.00 ct</span>
+                                        </button>
+                                        <button class="option-btn carat-box" data-carat="5.00" data-label="5.00" data-image="/assets/images/carat/Ring-08.png">
+                                            <span class="carat-fraction">5</span>
+                                            <span class="carat-value">5.00 ct</span>
+                                        </button>
                                     </div>
 
                                     <div class="tip-box border-start border-4 border-primary bg-light p-3">
@@ -233,65 +265,78 @@
 
                     <div class="builder-content" data-content="color">
                         <div class="row g-0 align-items-center h-100">
-                             <div class="col-lg-5 order-lg-1">
+                            <div class="col-lg-5 order-lg-1">
                                 <div class="visual-display">
                                     <div class="visual-card">
                                         <div class="visual-label text-center mb-3">
                                             <span class="label-badge" id="colorLabel">E - Colorless</span>
                                         </div>
-                                        <img id="colorImage" src="/assets/images/ColorE/E.jpg" alt="Color Grade" class="img-fluid visual-img">
+                                        <img id="colorImage" src="/assets/images/ColorE/E.jpg" alt="Color Grade"
+                                            class="img-fluid visual-img">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-7 order-lg-2">
                                 <div class="controls-panel">
                                     <h3 class="control-heading">Color Grade</h3>
-                                    <p class="control-sub">Diamond color is graded from D (colorless) to O (noticeable tint). The less color, the higher the grade.</p>
-                                    
-                                    <div class="row g-2 mb-4">
-                                        
-                                        <div class="col-4">
-                                            <div class="text-center mb-2 text-muted small fw-bold text-uppercase">Faint Yellow</div>
-                                            <div class="d-flex flex-wrap justify-content-center gap-2">
-                                                <button class="option-btn" data-color="O" data-image="/assets/images/ColorE/O.jpg">O</button>
-                                                <button class="option-btn" data-color="N" data-image="/assets/images/ColorE/N.jpg">N</button>
-                                                <button class="option-btn" data-color="M" data-image="/assets/images/ColorE/M.jpg">M</button>
-                                                <button class="option-btn" data-color="L" data-image="/assets/images/ColorE/L.jpg">L</button>
-                                            </div>
+                                    <p class="control-sub">Diamond color is graded from D (colorless) to O (noticeable tint). The less
+                                        color, the higher the grade.</p>
+                    
+                                    <div class="color-scale-wrapper mb-4">
+                                        <div class="scale-segment active" id="seg-colorless">
+                                            <div class="scale-label">Colorless</div>
+                                            <div class="scale-bar-line"></div>
                                         </div>
-
-                                        <div class="col-4">
-                                            <div class="text-center mb-2 text-muted small fw-bold text-uppercase">Near Colorless</div>
-                                            <div class="d-flex flex-wrap justify-content-center gap-2">
-                                                <button class="option-btn" data-color="K" data-image="/assets/images/ColorE/K.jpg">K</button>
-                                                <button class="option-btn" data-color="J" data-image="/assets/images/ColorE/J.jpg">J</button>
-                                                <button class="option-btn" data-color="I" data-image="/assets/images/ColorE/I.jpg">I</button>
-                                                <button class="option-btn" data-color="H" data-image="/assets/images/ColorE/H.jpg">H</button>
-                                            </div>
+                                        <div class="scale-segment" id="seg-near">
+                                            <div class="scale-label">Near Colorless</div>
+                                            <div class="scale-bar-line"></div>
                                         </div>
-
-                                        <div class="col-4">
-                                            <div class="text-center mb-2 text-muted small fw-bold text-uppercase">Colorless</div>
-                                            <div class="d-flex flex-wrap justify-content-center gap-2">
-                                                <button class="option-btn" data-color="G" data-image="/assets/images/ColorE/G.jpg">G</button>
-                                                <button class="option-btn" data-color="F" data-image="/assets/images/ColorE/F.jpg">F</button>
-                                                <button class="option-btn active" data-color="E" data-image="/assets/images/ColorE/E.jpg">E</button>
-                                                <button class="option-btn" data-color="D" data-image="/assets/images/ColorE/D.jpg">D</button>
-                                            </div>
+                                        <div class="scale-segment" id="seg-faint">
+                                            <div class="scale-label">Faint Yellow</div>
+                                            <div class="scale-bar-line"></div>
                                         </div>
-
                                     </div>
-
+                    
+                                    <div class="slider-options color-options mb-4 justify-content-center">
+                                        <button class="option-btn" data-color="D" data-group="seg-colorless"
+                                            data-image="/assets/images/ColorE/D.jpg">D</button>
+                                        <button class="option-btn active" data-color="E" data-group="seg-colorless"
+                                            data-image="/assets/images/ColorE/E.jpg">E</button>
+                                        <button class="option-btn" data-color="F" data-group="seg-colorless"
+                                            data-image="/assets/images/ColorE/F.jpg">F</button>
+                                        <button class="option-btn" data-color="G" data-group="seg-colorless"
+                                            data-image="/assets/images/ColorE/G.jpg">G</button>
+                    
+                                        <button class="option-btn" data-color="H" data-group="seg-near"
+                                            data-image="/assets/images/ColorE/H.jpg">H</button>
+                                        <button class="option-btn" data-color="I" data-group="seg-near"
+                                            data-image="/assets/images/ColorE/I.jpg">I</button>
+                                        <button class="option-btn" data-color="J" data-group="seg-near"
+                                            data-image="/assets/images/ColorE/J.jpg">J</button>
+                                        <button class="option-btn" data-color="K" data-group="seg-near"
+                                            data-image="/assets/images/ColorE/K.jpg">K</button>
+                    
+                                        <button class="option-btn" data-color="L" data-group="seg-faint"
+                                            data-image="/assets/images/ColorE/L.jpg">L</button>
+                                        <button class="option-btn" data-color="M" data-group="seg-faint"
+                                            data-image="/assets/images/ColorE/M.jpg">M</button>
+                                        <button class="option-btn" data-color="N" data-group="seg-faint"
+                                            data-image="/assets/images/ColorE/N.jpg">N</button>
+                                        <button class="option-btn" data-color="O" data-group="seg-faint"
+                                            data-image="/assets/images/ColorE/O.jpg">O</button>
+                                    </div>
+                    
                                     <div class="tip-box border-start border-4 border-primary bg-light p-3">
                                         <div class="d-flex align-items-start gap-3">
                                             <i class="fas fa-palette text-primary mt-1 fs-5"></i>
                                             <div>
                                                 <h6 class="fw-bold text-dark mb-1">Expert Tip</h6>
-                                                <p class="m-0 medium text-muted">G-H color diamonds offer excellent value with no visible color to the untrained eye. D-F are premium colorless grades.</p>
+                                                <p class="m-0 medium text-muted">G-H color diamonds offer excellent value with no visible
+                                                    color to the untrained eye. D-F are premium colorless grades.</p>
                                             </div>
                                         </div>
                                     </div>
-
+                    
                                 </div>
                             </div>
                         </div>
@@ -314,7 +359,7 @@
                                     <h3 class="control-heading">Clarity Grade</h3>
                                     <p class="control-sub">Clarity measures internal and external imperfections called inclusions and blemishes. Fewer and smaller inclusions mean higher clarity and value.</p>
                                     
-                                    <div class="slider-options mb-4">
+                                    <div class="clarity-grid-container mb-4">
                                         <button class="option-btn" data-clarity="I2" data-image="clarity-i2.png">I2</button>
                                         <button class="option-btn" data-clarity="I1" data-image="clarity-i1.png">I1</button>
                                         <button class="option-btn" data-clarity="SI2" data-image="clarity-si2.png">SI2</button>
