@@ -80,6 +80,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+
+        // --- SPECIAL HANDLER FOR SHAPE TIPS ---
+        const shapeButtons = document.querySelectorAll('.shape-btn');
+        const shapeTipText = document.getElementById('shape-tip-text');
+
+        shapeButtons.forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Get the tip text from the data-tip attribute
+                const newTip = this.getAttribute('data-tip');
+
+                // If a tip exists, update the text with a fade effect
+                if (newTip && shapeTipText) {
+                    shapeTipText.style.opacity = '0';
+                    setTimeout(() => {
+                        shapeTipText.textContent = newTip;
+                        shapeTipText.style.opacity = '1';
+                    }, 200);
+                }
+            });
+        });
     }
 
     // Initialize all groups
@@ -88,5 +108,90 @@ document.addEventListener('DOMContentLoaded', () => {
     setupBuilderButtons('[data-color]', 'colorLabel', 'colorImage', ' - Color');
     setupBuilderButtons('[data-clarity]', 'clarityLabel', 'clarityImage', ' - Clarity');
     setupBuilderButtons('[data-cut]', 'cutLabel', 'cutImage');
+
+
+    // --- SPECIAL HANDLER FOR CARAT TIPS ---
+    const caratButtons = document.querySelectorAll('.carat-box');
+    const caratTipText = document.getElementById('carat-tip-text');
+
+    caratButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Get the tip text from the data-tip attribute
+            const newTip = this.getAttribute('data-tip');
+            
+            // If a tip exists, update the text with a fade effect
+            if (newTip && caratTipText) {
+                caratTipText.style.opacity = '0';
+                setTimeout(() => {
+                    caratTipText.textContent = newTip;
+                    caratTipText.style.opacity = '1';
+                }, 200);
+            }
+        });
+    });
+
+
+    // --- SPECIAL HANDLER FOR COLOR TIPS ---
+    const colorButtons = document.querySelectorAll('.color-box'); // Selects buttons with our new class
+    const colorTipText = document.getElementById('color-tip-text');
+
+    colorButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Get the tip text
+            const newTip = this.getAttribute('data-tip');
+            
+            // Update text with fade effect
+            if (newTip && colorTipText) {
+                colorTipText.style.opacity = '0';
+                setTimeout(() => {
+                    colorTipText.textContent = newTip;
+                    colorTipText.style.opacity = '1';
+                }, 200);
+            }
+        });
+    });
+
+
+    // --- SPECIAL HANDLER FOR CLARITY TIPS ---
+    // We select buttons specifically within the clarity container to avoid conflict
+    const clarityButtons = document.querySelectorAll('.clarity-grid-container .option-btn'); 
+    const clarityTipText = document.getElementById('clarity-tip-text');
+
+    clarityButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Get the tip text
+            const newTip = this.getAttribute('data-tip');
+            
+            // Update text with fade effect
+            if (newTip && clarityTipText) {
+                clarityTipText.style.opacity = '0';
+                setTimeout(() => {
+                    clarityTipText.textContent = newTip;
+                    clarityTipText.style.opacity = '1';
+                }, 200);
+            }
+        });
+    });
+
+
+    // --- SPECIAL HANDLER FOR CUT TIPS ---
+    const cutButtons = document.querySelectorAll('.cut-box');
+    const cutTipText = document.getElementById('cut-tip-text');
+
+    cutButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Get the tip text
+            const newTip = this.getAttribute('data-tip');
+            
+            // Update text with fade effect
+            if (newTip && cutTipText) {
+                cutTipText.style.opacity = '0';
+                setTimeout(() => {
+                    cutTipText.textContent = newTip;
+                    cutTipText.style.opacity = '1';
+                }, 200);
+            }
+        });
+    });
 
 });
