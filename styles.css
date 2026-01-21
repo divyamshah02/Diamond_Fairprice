@@ -194,7 +194,7 @@ ul {
 
 /* Right Side Image Animation */
 .hero-floating-img {
-    max-height: 500px; /* Limit height so it fits well */
+    max-height: 800px; /* Limit height so it fits well */
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
     animation: float 6s ease-in-out infinite;
 }
