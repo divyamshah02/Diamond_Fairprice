@@ -48,41 +48,36 @@ ul {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  padding: 15px 0; /* Add padding for vertical breathing room */
+  transition: all 0.3s ease;
 }
 
-.brand-logo i {
-  font-size: 1.8rem;
-  color: var(--accent-blue);
+.navbar.shadow-sm {
+  padding: 10px 0; /* Shrink slightly on scroll */
 }
 
-/* Update the existing .brand-logo style to handle images */
-.brand-logo {
+.navbar-brand {
   display: flex;
   align-items: center;
+  max-width: 75%; /* Prevents logo from crushing the toggler on tiny screens */
 }
 
-/* New style for the image logo */
+/* Logo Image */
 .navbar-logo-img {
-  height: 75px;
+  height: 65px;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
-/* 2. Optional: Shrink it slightly when user scrolls (to keep navbar compact) */
 .navbar.shadow-sm .navbar-logo-img {
-  height: 55px; 
+  height: 50px; 
 }
 
-/* 3. Mobile responsiveness: Keep it reasonable on small screens */
-@media (max-width: 991px) {
-  .navbar-logo-img {
-    height: 50px;
-  }
-}
-
+/* Brand Text */
 .brand-text {
   line-height: 1.1;
+  margin-left: 10px;
 }
 
 .brand-name {
@@ -90,6 +85,7 @@ ul {
   letter-spacing: 1px;
   font-size: 1.1rem;
   color: var(--primary-blue);
+  white-space: nowrap; /* Prevents name from breaking lines */
 }
 
 .brand-subtitle {
@@ -97,33 +93,141 @@ ul {
   letter-spacing: 2px;
   color: var(--accent-blue);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
+/* Navigation Links */
 .nav-link {
   font-weight: 600;
   color: var(--primary-blue) !important;
-  margin: 0 10px;
+  margin: 0 12px; /* Standard spacing */
   font-size: 0.95rem;
+  position: relative;
 }
 
+/* Hover underline effect */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 5px;
+  left: 0;
+  background-color: var(--accent-blue);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
 .btn-nav-primary {
   background: var(--accent-blue);
   color: white;
   padding: 0.6rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
+  white-space: nowrap;
+  transition: 0.3s;
 }
 
 .btn-nav-primary:hover {
   background: var(--primary-blue);
   color: white;
+  transform: translateY(-2px);
+}
+
+.btn-nav-login {
+  color: var(--primary-blue);
+  border: 2px solid var(--border-light);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-nav-login:hover {
+  border-color: var(--primary-blue);
+  background: var(--primary-blue);
+  color: white;
+}
+
+/* --- RESPONSIVENESS FIXES --- */
+
+/* 1. LAPTOP SQUEEZE FIX (992px to 1200px) */
+/* Prevents the menu from breaking into two lines before the burger menu appears */
+@media (min-width: 992px) and (max-width: 1250px) {
+  .nav-link {
+    margin: 0 5px; /* Reduce spacing between links */
+    font-size: 0.85rem; /* Slightly smaller text */
+  }
+  
+  .navbar-logo-img {
+    height: 50px; /* Force smaller logo on laptops */
+  }
+  
+  .brand-name {
+    font-size: 1rem;
+  }
+  
+  .btn-nav-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* 2. MOBILE MENU & SMALL SCREEN FIXES (Max 991px) */
+@media (max-width: 991px) {
+  /* ... (keep the .navbar-collapse and .navbar-logo-img styles) ... */
+
+  /* Stack link items nicely */
+  .navbar-nav {
+    gap: 15px;
+  }
+
+  .nav-link {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-light);
+  }
+  
+  .nav-link::after {
+    display: none; 
+  }
+
+  /* --- UPDATE: Button Logic --- */
+  /* Remove the width: 100% and margin-top rules here. 
+     The HTML classes (d-flex, gap-2, flex-grow-1) now handle the layout. */
+  .btn-nav-primary, 
+  .btn-nav-login {
+    /* Just ensure they don't break flex behavior */
+    display: inline-flex; 
+    align-items: center;
+  }
+}
+
+/* 3. TINY PHONES (Max 400px) */
+@media (max-width: 400px) {
+  .brand-text {
+    display: none; /* Hide text on very small screens to keep Toggler accessible */
+  }
+  
+  .navbar-brand {
+    margin-right: 0;
+  }
 }
 
 /* --- HERO SECTION --- */
 .hero-section {
   position: relative;
   /* You can keep your existing background image here */
-  /* background: url('assets/images/hero-image.jpg') no-repeat center center/cover; */
+  background: url('assets/images/hero-bg2.png') no-repeat center center/cover;
   height: 105vh;
   display: flex;
   align-items: center;
@@ -645,6 +749,29 @@ ul {
   justify-items: stretch;                /* Stretch buttons to fill space */
 }
 
+/* RESPONSIVE FIXES FOR COLOR TAB */
+
+/* Tablet / Small Laptop: Switch to 4 Columns */
+@media (max-width: 991px) {
+  .slider-options.color-options {
+    grid-template-columns: repeat(4, 1fr); /* D, E, F, G on row 1... */
+  }
+}
+
+/* Mobile: Switch to 3 Columns */
+@media (max-width: 576px) {
+  .slider-options.color-options {
+    grid-template-columns: repeat(3, 1fr); /* D, E, F on row 1... */
+  }
+  
+  /* Ensure the buttons don't force overflow */
+  .color-box {
+    font-size: 0.9rem;
+    height: 45px;
+    min-width: 0 !important; /* OVERRIDE the global 60px min-width so they fit */
+  }
+}
+
 /* --- CLARITY TAB GRID --- */
 .clarity-grid-container {
   display: grid;
@@ -785,6 +912,18 @@ ul {
   font-size: 1.3rem;
   font-weight: 700;
   font-family: var(--font-heading);
+
+  display: block; /* Reset flex if it was set previously */
+  line-height: 1.2;
+}
+
+/* Override the generic footer img rule */
+.main-footer .footer-side-logo {
+  width: 80px !important;    /* Adjust width as preferred */
+  height: auto !important;   /* Maintain aspect ratio */
+  max-height: 110px;          /* Prevent it from getting too tall */
+  object-fit: contain;
+  margin-top: 5px;           /* visual alignment with the Title text */
 }
 
 .footer-heading {
@@ -829,6 +968,10 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .main-footer {
+    text-align: center;
+  }
+  
   .shape-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -901,7 +1044,9 @@ ul {
 .showcase-overlay {
   position: absolute;
   top: 30px;
-  left: 470px;
+  right: 30px;  /* Pinned to the RIGHT side */
+  left: auto;   /* Release from the left side */
+  z-index: 5;
 }
 
 .overlay-badge {
@@ -1041,8 +1186,47 @@ ul {
     font-size: 2rem;
   }
 
+  /* 1. Center the text content */
   .showcase-content {
-    padding: 40px;
+    padding: 50px 30px;
+    text-align: center;       /* Centers the Title & Description */
+    display: flex;
+    flex-direction: column;   /* Ensures vertical stacking */
+    align-items: center;      /* Centers the flex items horizontally */
+  }
+
+  /* 2. Center the inner container width */
+  .showcase-inner {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* 3. Center the features list (Icons + Text) */
+  .showcase-features {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the items in the column */
+  }
+
+  /* 4. Ensure the individual feature items look good */
+  .showcase-feature-item {
+    justify-content: center; /* Centers icon relative to text if flex */
+    text-align: left;        /* Keep the small text left-aligned for readability */
+    width: 100%;
+    max-width: 300px;        /* Limits width so it doesn't look stretched */
+    margin: 0 auto;          /* Centers the block itself */
+  }
+  
+  /* 5. Adjust Badge for small screens */
+  .showcase-overlay {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .overlay-badge {
+    font-size: 0.9rem;
+    padding: 10px 15px;
   }
 }
 
@@ -1180,6 +1364,94 @@ ul {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 }
 
+/* --- HOW IT WORKS RESPONSIVENESS --- */
+
+/* --- FIX: HOW IT WORKS (LAPTOP ALIGNMENT) --- */
+/* Target screens between 992px (Tablet limit) and 1200px (Large Desktop) */
+@media (min-width: 992px) and (max-width: 1300px) {
+    
+    /* 1. Prevent Wrapping */
+    .steps-container {
+        flex-wrap: nowrap; /* Force them to stay in one line */
+        justify-content: center;
+        gap: 10px; /* Reduce gap to fit tightly */
+    }
+
+    /* 2. Shrink the Step Items */
+    .step-item {
+        min-width: 0; /* Allow them to shrink below 250px */
+        flex: 1;      /* Share remaining space equally */
+        padding: 0 5px;
+    }
+
+    /* 3. Shrink the Connector Lines */
+    .step-connector {
+        flex: 0 0 50px; /* Reduce from 100px to 50px */
+        margin-top: 40px;
+    }
+    
+    /* Optional: Slightly smaller text to fit the narrower columns */
+    .step-item h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    /* 1. Force Vertical Stack */
+    .steps-container {
+        flex-direction: column;
+        align-items: center; /* Center everything */
+        margin-top: 40px;
+        gap: 0; /* We will use margins on items instead */
+    }
+
+    /* 2. Style Individual Steps */
+    .step-item {
+        width: 100%;
+        max-width: 500px; /* Keep text readable width */
+        margin-bottom: 60px; /* Space for the arrow connector */
+        padding: 0 15px; /* Ensure text doesn't hit edges */
+        position: relative; /* Needed for the arrow positioning */
+        flex: none; /* Disable flex growing */
+    }
+
+    /* Remove margin from the last item */
+    .step-item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 3. Add Vertical Down Arrow Connector */
+    /* This creates a visual link between steps on mobile */
+    .step-item:not(:last-child)::after {
+        content: '\f078'; /* FontAwesome Chevron Down */
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        bottom: -40px; /* Position in the gap between steps */
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba(255, 255, 255, 0.3); /* Subtle white */
+        font-size: 1.2rem;
+        animation: float-arrow 2s ease-in-out infinite;
+    }
+
+    /* 4. Text Adjustments for Mobile */
+    .step-item h3 {
+        margin-top: 20px;
+        font-size: 1.4rem;
+    }
+    
+    .step-item p {
+        font-size: 1rem;
+    }
+}
+
+/* Optional: Animation for the mobile arrow */
+@keyframes float-arrow {
+    0%, 100% { transform: translate(-50%, 0); opacity: 0.3; }
+    50% { transform: translate(-50%, 5px); opacity: 0.8; }
+}
+
 /* --- EDUCATION SECTION --- */
 .education-section {
   padding: 100px 0;
@@ -1257,26 +1529,42 @@ ul {
 }
 
 .custom-accordion .accordion-item {
-  border: none;
+  border: 1px solid var(--border-light);
   background: white;
   border-radius: 10px;
   margin-bottom: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.custom-accordion .accordion-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Lift effect on hover */
+    transform: translateY(-2px);
 }
 
 .custom-accordion .accordion-button {
+  font-size: 1.05rem; /* Slightly larger text for readability */
   font-weight: 700;
   color: var(--primary-blue);
   background: white;
-  padding: 20px 25px;
+  padding: 25px;
   box-shadow: none;
-  /* Remove default bootstrap shadow */
+}
+
+/* Add a custom icon rotation animation */
+.custom-accordion .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232c7be5'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transition: transform 0.3s ease;
 }
 
 .custom-accordion .accordion-button:not(.collapsed) {
   background: var(--soft-blue);
   color: var(--accent-blue);
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
 }
 
 .custom-accordion .accordion-button:focus {
@@ -1376,8 +1664,8 @@ ul {
 
 /* Social Links */
 .social-links {
-  display: flex;
-  gap: 15px;
+  display: inline-flex;
+  gap: 20px;
 }
 
 .social-links a {
@@ -1745,49 +2033,57 @@ ul {
 
 /* --- NEW SECTION: REAL-TIME INSPECTION (Split Layout) --- */
 .inspection-section {
-    background: #fff;
-    overflow: hidden;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
 }
 
+/* DESKTOP: Adjusted height to be "Adequate" (not too tall) */
 .inspection-grid {
     display: flex;
     flex-wrap: wrap;
-    min-height: 650px; /* Taller for a premium feel */
+    min-height: 550px; /* Reduced from 650px to fit laptops better */
+    align-items: stretch;
 }
 
-/* Text Side Styling */
+/* --- TEXT SIDE --- */
 .inspection-content-side {
     flex: 1;
-    min-width: 350px; /* Stacks on mobile */
+    min-width: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 80px;
     background: #ffffff;
-    order: 1; /* Text First */
+    
+    /* DESKTOP DEFAULT: Text stays on the LEFT */
+    order: 1; 
 }
 
 .inspection-inner {
     max-width: 550px;
 }
 
-/* Visual Side Styling */
+/* --- IMAGE SIDE --- */
 .inspection-visual-side {
     flex: 1;
     min-width: 350px;
     position: relative;
     background: #f0f4f8;
-    order: 2; /* Image Second (Right) */
+    
+    /* DESKTOP DEFAULT: Image stays on the RIGHT */
+    order: 2; 
 }
 
 .inspection-img-full {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image covers the area without stretching */
+    object-fit: cover;
     display: block;
 }
 
-/* Typography */
+/* Typography & Button Styles */
 .inspection-title {
     font-family: var(--font-heading);
     font-size: 2.5rem;
@@ -1816,7 +2112,6 @@ ul {
     font-weight: 600;
 }
 
-/* CTA Button Styling */
 .inspection-cta {
     display: inline-block;
     font-size: 0.9rem;
@@ -1834,23 +2129,164 @@ ul {
     padding-left: 10px;
 }
 
-/* Responsive Adjustments */
+/* --- RESPONSIVE ORDERING (The Fix) --- */
 @media (max-width: 991px) {
+    /* 1. Force items to stack by making them full width */
+    .inspection-content-side,
+    .inspection-visual-side {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* 2. MOBILE: SWAP THE ORDER */
+    /* Force Image to Top */
+    .inspection-visual-side {
+        order: 1 !important; 
+        min-height: 400px;
+    }
+
+    /* Force Text to Bottom */
     .inspection-content-side {
+        order: 2 !important;
         padding: 50px 30px;
         text-align: center;
     }
-
-    .inspection-visual-side {
-        min-height: 400px; /* Height for image on mobile */
-        order: 1; /* Optional: Move image to top on mobile */
-    }
     
-    .inspection-content-side {
-        order: 2;
-    }
-
     .inspection-title {
         font-size: 2rem;
+    }
+}
+
+/* --- SEAMLESS CHECKERBOARD LAYOUT FIX --- */
+
+/* 1. Force the grid containers to stretch items to full height */
+.inspection-grid,
+.showcase-grid {
+    align-items: stretch; /* Ensures text and image sides are exactly the same height */
+}
+
+/* 2. Desktop Alignment (The Key Fix) */
+/* We force the columns to be exactly 50% width. 
+   Without this, the width might fluctuate based on text content, 
+   causing the corners to miss each other. */
+@media (min-width: 992px) {
+    .inspection-content-side,
+    .inspection-visual-side,
+    .showcase-visual,
+    .showcase-content {
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 50%;
+    }
+}
+
+/* 3. Remove Vertical Gaps */
+.inspection-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    position: relative;
+    z-index: 10; /* Ensure it sits cleanly */
+}
+
+.premium-showcase-section {
+    margin-top: -1px !important; /* Pulls the section up by 1px to eliminate any sub-pixel white lines */
+    padding-top: 0 !important;
+    position: relative;
+    z-index: 5;
+}
+
+/* 4. Ensure images act as blocks (prevents tiny gaps at the bottom) */
+.inspection-img-full,
+.showcase-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the box without stretching */
+}
+
+/* OPTION 11: 3D DIAMOND FLIP */
+.back-to-top-3d {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    perspective: 1000px; /* Essential for 3D effect */
+    z-index: 999;
+    cursor: pointer;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.back-to-top-3d.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.flipper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* Allows the flip */
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Trigger Flip on Hover */
+.back-to-top-3d:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+/* Common Styles for Front and Back */
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back of the element */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Diamond Shape */
+    background: var(--primary-blue);
+    color: white;
+    transform: rotate(45deg); /* Diamond Rotation */
+    border-radius: 5px;
+    border: 2px solid var(--accent-blue);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Fix Icon Rotation inside the Diamond */
+.front i, .back i {
+    transform: rotate(-45deg); 
+    font-size: 1.2rem;
+}
+
+/* The Back Face (Arrow) */
+.back {
+    background: var(--accent-blue);
+    border-color: white;
+    transform: rotateY(180deg) rotate(45deg); /* Already flipped */
+}
+
+/* --- SAFETY PATCH: BUILDER LABELS ON TINY SCREENS --- */
+@media (max-width: 400px) {
+    /* Allow the color scale text to wrap if the screen is too tight */
+    .scale-label {
+        font-size: 0.6rem; /* Slightly smaller font */
+        white-space: normal; /* Allow text to wrap to two lines */
+        line-height: 1.1;
+    }
+    
+    /* Ensure the 3D button doesn't cover the footer copyright on small phones */
+    .back-to-top-3d {
+        bottom: 15px;
+        right: 15px;
+        width: 40px; /* Slightly smaller button */
+        height: 40px;
     }
 }

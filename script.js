@@ -194,4 +194,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- BACK TO TOP BUTTON LOGIC ---
+    const backToTopBtn = document.getElementById('backToTop');
+
+    if (backToTopBtn) {
+        // 1. Show/Hide button on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) { // Show after scrolling 400px down
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // 2. Smooth Scroll to top on click
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
 });
