@@ -123,7 +123,7 @@ ul {
 .hero-section {
   position: relative;
   /* You can keep your existing background image here */
-  background: url('assets/images/hero-image.jpg') no-repeat center center/cover;
+  /* background: url('assets/images/hero-image.jpg') no-repeat center center/cover; */
   height: 105vh;
   display: flex;
   align-items: center;
