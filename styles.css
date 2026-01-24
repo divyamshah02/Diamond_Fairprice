@@ -163,7 +163,7 @@ ul {
 
 /* Optional: Add color to the icons inside nav links */
 .nav-link i {
-  color: var(--accent-blue);
+  color: var(--accent-blue) !important;
   transition: 0.3s;
 }
 
