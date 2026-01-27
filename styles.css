@@ -640,14 +640,13 @@ ul {
 .carat-box.active {
   background: var(--accent-blue);
   color: white;
-  border-color: var(--accent-blue);
-}
-
-.carat-box.active {
   border-color: transparent;
   box-shadow: 0 8px 20px rgba(108, 154, 230, 0.3);
 }
 
+/* This forces both the fraction and the value text to turn white on hover/active */
+.carat-box:hover .carat-fraction,
+.carat-box:hover .carat-value,
 .carat-box.active .carat-fraction,
 .carat-box.active .carat-value {
   color: white !important;
@@ -1974,8 +1973,8 @@ ul {
    ========================================= */
 .cta-section {
   position: relative;
-  padding: 100px 0;
-  background: url('https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80');
+  padding: 50px 0;
+  background: url('assets/images/hero-bg.png');
   background-size: cover;
   background-position: center;
   color: white;
