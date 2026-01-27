@@ -1829,7 +1829,7 @@ ul {
 
 .vendor-slide {
   width: 200px;
-  padding: 0 30px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1838,6 +1838,9 @@ ul {
 .vendor-slide img {
   max-width: 100%;
   transition: 0.3s;
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
 .vendor-slide img:hover {
