@@ -519,7 +519,7 @@ ul {
 
 .visual-img {
   max-height: 350px;
-  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
+  /* filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15)); */
   transition: transform 0.3s ease;
 }
 
@@ -554,7 +554,7 @@ ul {
 /* --- SHAPE TAB --- */
 .shape-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 15px;
 }
 
@@ -755,7 +755,7 @@ ul {
 /* --- CLARITY TAB --- */
 .clarity-grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 15px;
   width: 100%;
 }
@@ -845,7 +845,7 @@ ul {
   }
 
   .shape-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .slider-options.color-options {
@@ -853,7 +853,7 @@ ul {
   }
 
   .clarity-grid-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -888,7 +888,7 @@ ul {
   }
 
   .clarity-grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .cut-grid-container {
