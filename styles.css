@@ -77,6 +77,7 @@ ul {
 
 .text-gradient {
   background: linear-gradient(to right, #ffffff, #a6cbf3);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -906,7 +907,429 @@ ul {
 
 
 /* =========================================
-   5. WHOLESALE ADVANTAGE (Commented in HTML)
+   5. Platoform Section
+   ========================================= */
+.snake-section {
+    padding: 100px 0;
+    background: #f8f9fc; /* Section Background */
+    position: relative;
+    overflow: hidden; 
+}
+
+/* 1. GRID LAYOUT */
+.snake-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 160px; 
+    column-gap: 80px; 
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 2. THE CARD (Container) */
+.snake-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    overflow: visible; 
+    position: relative;
+    z-index: 10; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.snake-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(44, 123, 229, 0.15);
+}
+
+/* 3. THE IMAGE */
+.snake-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: fill;
+    object-position: top;
+    border-bottom: 1px solid var(--border-light);
+    background: #f0f4f8;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.snake-card-body {
+    padding: 25px;
+    text-align: center;
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Badges and Text Styles */
+.snake-step-num {
+    background: var(--accent-blue);
+    color: white;
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.snake-card-body h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   4. THE CONNECTOR LINES & TEXT BOXES
+   ========================================= */
+
+:root {
+    --snake-line-color: #475569;
+    --snake-line-width: 4px;
+}
+
+@media (min-width: 1200px) {
+
+    /* Grid Positioning */
+    .snake-item-1 { grid-column: 1; grid-row: 1; }
+    .snake-item-2 { grid-column: 2; grid-row: 1; }
+    .snake-item-3 { grid-column: 3; grid-row: 1; }
+    
+    .snake-item-4 { grid-column: 3; grid-row: 2; }
+    .snake-item-5 { grid-column: 2; grid-row: 2; }
+    .snake-item-6 { grid-column: 1; grid-row: 2; }
+
+    /* --- HORIZONTAL CURVES --- */
+    /* 1 -> 2 AND 2 -> 3 */
+    .snake-item-1::after, .snake-item-2::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -100px; 
+        width: 120px; 
+        height: 60px;
+        border-top: var(--snake-line-width) dashed var(--snake-line-color); 
+        border-radius: 50%; 
+        z-index: -1; 
+        pointer-events: none;
+    }
+
+    /* 4 <- 5 AND 5 <- 6 */
+    .snake-item-4::after, .snake-item-5::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -100px;
+        width: 120px;
+        height: 60px;
+        border-top: var(--snake-line-width) dashed var(--snake-line-color);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    /* --- THE BIG VERTICAL TURN (3 -> 4) --- */
+    /* This creates the line that the text box will sit on */
+    .snake-grid::before {
+        content: '';
+        position: absolute;
+        
+        /* Fixed positioning to align with the text box */
+        right: -45px;
+        top: 200px; 
+        height: 570px;
+        width: 100px;
+        
+        /* The C-Shape Bracket */
+        border-right: var(--snake-line-width) dashed var(--snake-line-color);
+        border-top: var(--snake-line-width) dashed var(--snake-line-color);
+        border-bottom: var(--snake-line-width) dashed var(--snake-line-color);
+        
+        border-top-right-radius: 60px;
+        border-bottom-right-radius: 60px;
+        
+        z-index: 1; 
+        opacity: 0.8;
+    }
+
+    /* --- FLOATING TEXT BOXES --- */
+        :root {
+          --primary-blue: #0b2240;
+          --accent-blue: #2c7be5;
+          --accent-blue-light: #5695ea;
+          --soft-blue: #eef4fc;
+          --hover-blue: #1a68d1;
+          --text-dark: #121621;
+          --text-muted: #6c757d;
+          --white: #ffffff;
+          --border-light: #e3e6f0;
+    
+          /* Fonts */
+          --font-heading: 'Playfair Display', serif;
+          --font-body: 'Lato', sans-serif;
+        }
+    
+    .connector-text-box {
+        position: absolute;
+        
+        /* Matches Section Background to "Cut" the line visually */
+        background: var(--accent-blue-light);
+        border: 2px solid var(--primary-blue);
+        color: var(--soft-blue);
+        padding: 15px 20px;
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        z-index: 20; 
+        width: 240px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    /* Text Box 1: Sits DIRECTLY ON the Vertical Line */
+    .ct-1 {
+        top: 50%;
+        /* Calculation: 
+           Line is at -100px (right of grid).
+           Box width is 240px. Half width is 120px.
+           To center box on line: -100px - 120px = -220px 
+        */
+        right: -100px; 
+        transform: translateY(-50%);
+    }
+    
+    /* Remove the old extra line connector */
+    .ct-1::before {
+        display: none;
+    }
+
+    /* Text Box 2: Bottom Left End */
+    .ct-2 {
+        bottom: 450px; /* Distance below the cards */
+        left: -80px;    /* Shifted right so it's not directly under Step 6 */
+    }
+
+    /* 2. The L-Curve Line */
+    .ct-2::before {
+        content: '';
+        position: absolute;
+        
+        /* ALIGNMENT: Connects Step 6 Bottom to Text Box Left */
+        top: 135px;   /* Starts up near Step 6 */
+        right: 57%;   /* Attaches to the left edge of the text box */
+        
+        /* SIZE of the L-Shape */
+        width: 80px;   /* Horizontal span */
+        height: 125px; /* Vertical drop */
+        
+        /* THE SHAPE: Vertical Line down, Curve, Horizontal Line right */
+        border-left: var(--snake-line-width) dashed var(--snake-line-color);
+        border-bottom: var(--snake-line-width) dashed var(--snake-line-color);
+        
+        /* THE CURVE: Rounded Bottom-Left Corner */
+        border-bottom-left-radius: 40px;
+        
+        /* Position adjustment */
+        transform: translateY(-50%); /* Aligns the horizontal line with the box center */
+        z-index: -1;
+    }
+}
+
+/* --- MOBILE STYLES --- */
+@media (max-width: 1199px) {
+    .snake-grid {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+    .snake-grid::before, .snake-item-1::after, .snake-item-2::after, .snake-item-4::after, .snake-item-5::after {
+        display: none; 
+    }
+    
+    .connector-text-box {
+        position: relative;
+        display: block;
+        margin: 20px auto;
+        width: 100%;
+        top: auto; right: auto; left: auto; bottom: auto;
+        transform: none;
+    }
+}
+
+/* =========================================
+   NEW SECTION: SPLIT SLIDER (MAXIMIZED SIZE)
+   ========================================= */
+.process-slider-section {
+    padding: 100px 0;
+    background: #f8f9fc;
+}
+
+/* 1. Main Outer Wrapper (WIDER) */
+.process-carousel-outer {
+    position: relative;
+    max-width: 1200px; /* Increased from 1000px to 1300px */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 2. The Mask (Rounded Corners) */
+.carousel-mask {
+    background: white;
+    border-radius: 25px; /* Slightly more rounded */
+    box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+    overflow: hidden; 
+    border: 1px solid var(--border-light);
+}
+
+/* --- IMAGE SIDE (TALLER & NO PADDING) --- */
+.slider-image-box {
+    height: 500px; /* Increased from 380px */
+    background: #eef4fc; /* Background usually hidden by image now */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* REMOVED PADDING to maximize image size */
+}
+
+.slider-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures full image is visible */
+    object-position: center;
+    /* Removed drop-shadow on image since it now fills the space */
+}
+
+/* --- CONTENT SIDE (TALLER TEXT AREA) --- */
+.slider-content-box {
+    padding: 60px 80px; /* More breathing room for text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px; /* Matches new image height */
+}
+
+.step-number-large {
+    font-size: 4rem; /* Bigger Number */
+    font-weight: 900;
+    color: var(--accent-blue-light);
+    line-height: 1;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+}
+
+.slider-content-box h3 {
+    font-size: 2.2rem; /* Bigger Headline */
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+}
+
+.slider-content-box p {
+    font-size: 1.10rem; /* Larger, readable text */
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* --- EXTERNAL CONTROLS (PUSHED FURTHER OUT) --- */
+.outside-control {
+    width: 80px; /* Larger hit area */
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto; 
+}
+
+.control-icon {
+    width: 50px; /* Bigger Buttons */
+    height: 50px;
+    background: white;
+    color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-light);
+    font-size: 1.2rem;
+}
+
+.outside-control:hover .control-icon {
+    background: var(--primary-blue);
+    color: white;
+    box-shadow: 0 15px 40px rgba(44, 123, 229, 0.4);
+}
+
+/* Position them further outside since slider is wider */
+.carousel-control-prev.outside-control {
+    left: -90px;
+}
+
+.carousel-control-next.outside-control {
+    right: -90px;
+}
+
+/* --- DIAMOND INDICATORS --- */
+.diamond-indicators {
+    bottom: -60px; 
+    margin-bottom: 0;
+}
+
+.diamond-indicators button {
+    width: 11px !important; /* Slightly bigger dots */
+    height: 11px !important;
+    background-color: var(--primary-blue) !important;
+    opacity: 0.2;
+    margin: 0 10px !important;
+    border: none;
+    border-radius: 1px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.diamond-indicators button.active {
+    opacity: 1;
+    background-color: var(--accent-blue) !important;
+    transform: rotate(45deg) scale(1.3);
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1450px) {
+    /* If screen is too small for external buttons, pull them in */
+    .carousel-control-prev.outside-control { left: -20px; z-index: 10; }
+    .carousel-control-next.outside-control { right: -20px; z-index: 10; }
+}
+
+@media (max-width: 991px) {
+    .process-carousel-outer {
+        max-width: 100%;
+        padding: 0 15px; 
+    }
+    
+    .outside-control { display: none; } /* Hide buttons on mobile */
+
+    .slider-image-box, .slider-content-box {
+        height: auto;
+        min-height: 350px;
+    }
+    
+    .slider-content-box {
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    .diamond-indicators { bottom: -50px; }
+}
+
+
+/* =========================================
+   6. WHOLESALE ADVANTAGE (Commented in HTML)
    ========================================= */
 .wholesale-advantage-section {
   padding: 100px 0;
@@ -1006,7 +1429,7 @@ ul {
 
 
 /* =========================================
-   6. INSPECTION SECTION
+   7. INSPECTION SECTION
    ========================================= */
 .inspection-section {
   background: #fff;
