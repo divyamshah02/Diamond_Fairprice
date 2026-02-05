@@ -1190,7 +1190,7 @@ ul {
 /* --- IMAGE SIDE (TALLER & NO PADDING) --- */
 .slider-image-box {
     height: 500px; /* Increased from 380px */
-    background: #eef4fc; /* Background usually hidden by image now */
+    /* background: #eef4fc; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1207,7 +1207,7 @@ ul {
 
 /* --- CONTENT SIDE (TALLER TEXT AREA) --- */
 .slider-content-box {
-    padding: 60px 80px; /* More breathing room for text */
+    padding: 60px 30px; /* More breathing room for text */
     display: flex;
     flex-direction: column;
     justify-content: center;
