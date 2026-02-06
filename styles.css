@@ -834,7 +834,7 @@ ul {
 }
 
 /* --- BUILDER RESPONSIVENESS --- */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .visual-display {
     border-left: none;
     border-bottom: 1px solid var(--border-light);
@@ -903,11 +903,95 @@ ul {
     white-space: normal;
     line-height: 1.1;
   }
+} */
+
+/* =========================================
+   BUILDER MOBILE SLIDER (FIXED WIDTHS)
+   ========================================= */
+
+@media (max-width: 991px) {
+  
+  /* 1. Reset Grid Layouts to Flex for Sliding */
+  .shape-grid,
+  .carat-grid-container,
+  .slider-options.color-options,
+  .clarity-grid-container,
+  .cut-grid-container {
+    display: flex !important;           
+    overflow-x: auto;                   
+    flex-wrap: nowrap;                  
+    gap: 10px;                          
+    padding-bottom: 15px;               
+    scroll-snap-type: x mandatory;      
+    -webkit-overflow-scrolling: touch;  
+    
+    /* Remove any existing grid template columns */
+    grid-template-columns: none !important;
+    
+    /* Hide Scrollbar */
+    scrollbar-width: none;              
+    -ms-overflow-style: none;           
+  }
+
+  /* Hide Scrollbar (Chrome/Safari) */
+  .shape-grid::-webkit-scrollbar,
+  .carat-grid-container::-webkit-scrollbar,
+  .slider-options.color-options::-webkit-scrollbar,
+  .clarity-grid-container::-webkit-scrollbar,
+  .cut-grid-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 2. FORCE BUTTONS TO BE SMALLER (Override width: 100%) */
+  
+  /* SHAPE BUTTONS */
+  .shape-btn {
+    min-width: 90px;
+    width: 90px !important;    /* Forces button to be small */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    height: 100px;
+  }
+
+  /* CARAT BOXES */
+  .carat-box {
+    min-width: 90px;
+    width: 90px !important;    /* Forces button to be small */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin: 0;
+  }
+
+  /* COLOR BOXES */
+  .color-box {
+    min-width: 60px;
+    width: 60px !important;    /* Forces button to be small */
+    height: 50px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* CLARITY BUTTONS */
+  .clarity-grid-container .option-btn {
+    min-width: 80px;
+    width: 80px !important;    /* Forces button to be small */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 15px 5px;         /* Adjust padding to fit text */
+  }
+
+  /* CUT BOXES */
+  .cut-box {
+    min-width: 100px;
+    width: 100px !important;   /* Forces button to be small */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
 }
 
 
 /* =========================================
-   5. Platoform Section
+   5. Platform Section
    ========================================= */
 .snake-section {
     padding: 100px 0;
