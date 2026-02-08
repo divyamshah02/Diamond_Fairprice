@@ -989,6 +989,64 @@ ul {
   }
 }
 
+/* =========================================
+   MOBILE SCROLL ARROWS (NEW ADDITION)
+   ========================================= */
+
+/* The wrapper keeps the arrows and the list together */
+.mobile-scroll-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Common Arrow Styles */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    color: var(--primary-blue);
+    font-size: 0.8rem;
+    display: none; /* Hidden by default on Desktop */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.scroll-arrow:active {
+    background: var(--accent-blue);
+    color: white;
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Positioning */
+.scroll-arrow.left {
+    left: -10px;
+}
+
+.scroll-arrow.right {
+    right: -10px;
+}
+
+/* Show arrows ONLY on mobile/tablet (matching your existing breakpoint) */
+@media (max-width: 991px) {
+    .scroll-arrow {
+        display: flex;
+    }
+    
+    /* Add a little padding to the wrapper so arrows don't overlap the first/last items too much */
+    .mobile-scroll-wrapper {
+        padding: 0 5px;
+    }
+}
+
 
 /* =========================================
    5. Platform Section

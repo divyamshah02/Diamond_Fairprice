@@ -216,4 +216,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- MOBILE SCROLL BUTTONS LOGIC ---
+    const scrollArrows = document.querySelectorAll('.scroll-arrow');
+    
+    scrollArrows.forEach(arrow => {
+        arrow.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default button behavior
+            
+            // 1. Find the wrapper (parent)
+            const wrapper = this.closest('.mobile-scroll-wrapper');
+            
+            // 2. Find the actual scrollable container inside the wrapper
+            // It could be .shape-grid, .carat-grid-container, etc.
+            // We select the first div that isn't the arrow itself
+            const container = wrapper.querySelector('div[class*="grid"], div[class*="options"]');
+            
+            if (container) {
+                // 3. Determine scroll direction and amount
+                const scrollAmount = 150; // Adjust speed here
+                const direction = this.classList.contains('left') ? -1 : 1;
+                
+                // 4. Perform smooth scroll
+                container.scrollBy({
+                    left: scrollAmount * direction,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
 });
