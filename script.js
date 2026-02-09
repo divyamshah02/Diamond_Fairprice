@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- GENERIC HANDLER FOR ALL BUILDER BUTTONS ---
     // This one function handles Shape, Carat, Color, Clarity, and Cut
     // --- GENERIC HANDLER FOR ALL BUILDER BUTTONS ---
     function setupBuilderButtons(buttonSelector, labelId, imageId, labelSuffix = '') {
@@ -227,8 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const wrapper = this.closest('.mobile-scroll-wrapper');
             
             // 2. Find the actual scrollable container inside the wrapper
-            // It could be .shape-grid, .carat-grid-container, etc.
-            // We select the first div that isn't the arrow itself
             const container = wrapper.querySelector('div[class*="grid"], div[class*="options"]');
             
             if (container) {
