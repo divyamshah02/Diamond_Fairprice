@@ -90,7 +90,7 @@ ul {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-  padding: 15px 0;
+  /* padding: 15px 0; */
   transition: all 0.3s ease;
 }
 
@@ -106,7 +106,7 @@ ul {
 
 /* Logo Image */
 .navbar-logo-img {
-  height: 65px;
+  height: 100px;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -125,13 +125,13 @@ ul {
 .brand-name {
   font-weight: 800;
   letter-spacing: 1px;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: var(--primary-blue);
   white-space: nowrap;
 }
 
 .brand-subtitle {
-  font-size: 0.7rem;
+  font-size: 1rem;
   letter-spacing: 2px;
   color: var(--accent-blue);
   text-transform: uppercase;
@@ -1349,7 +1349,7 @@ ul {
     width: auto;
     left: 10px !important;
     right: auto !important;     
-    top: 30%;
+    top: 300px;
     transform: translateY(-50%);
     z-index: 20;
   }
